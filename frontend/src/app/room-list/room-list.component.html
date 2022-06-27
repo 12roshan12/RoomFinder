@@ -1,0 +1,271 @@
+<div class="m-6 text-black ">
+    <div class="text-2xl pb-2">
+        <span class="border-b-2 border-black mb-2">Search Your Ideal Rooms</span>
+    </div>
+    <div class=" bg-gray-100 rounded-xl p-4 grid grid-cols-3 gap-x-4" [formGroup]="filterForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Searching For</mat-label>
+            <mat-select formControlName="accomodationType">
+                <mat-option value="one">Rooms</mat-option>
+                <mat-option value="two">Appartments</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category">
+                <mat-option value="one">Furnished</mat-option>
+                <mat-option value="two">Semi-Furnished</mat-option>
+                <mat-option value="two">Non-Furnished</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Room Size</mat-label>
+            <mat-select formControlName="size">
+                <mat-option value="one">Single Room</mat-option>
+                <mat-option value="two">1HK</mat-option>
+                <mat-option value="two">1BHK</mat-option>
+                <mat-option value="two">2BHK</mat-option>
+                <mat-option value="two">3BHK</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <mat-select formControlName="city">
+                <mat-option value="one">Kathmandu</mat-option>
+                <mat-option value="two">Biratnagar</mat-option>
+                <mat-option value="two">Butwal</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Area</mat-label>
+            <mat-select formControlName="area">
+                <mat-option value="one">Baneshwor</mat-option>
+                <mat-option value="two">Maitidevi</mat-option>
+                <mat-option value="two">Anamnagar</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="flex flex-col">
+            <span> <label>Price Range</label> : Upto <label>{{ filterForm.controls.price.value }}</label> </span>
+            <mat-slider thumbLabel [displayWith]="formatLabel" formControlName="price" (change)="test()"
+                tickInterval="1000" step="1000" min="0" max="100000" aria-label="units"></mat-slider>
+        </div>
+        <div class="flex items-end">
+            <div class="flex flex-row justify-center ">
+                <div class="form-check pr-1">
+                    <input
+                        class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label inline-block text-gray-800 pt-1 " for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
+                <div class="form-check pl-1">
+                    <input
+                        class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                        type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class=" form-check-label inline-block text-gray-800 pt-1 " for="flexCheckChecked">
+                        Checked checkbox
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-2">
+            <div class="flex justify-end">
+                <button class="p-2 m-2 bg-blue-500 border border-blue-900 text-white rounded-lg text-xl">Search <span
+                        class="pl-2"><i class="fa-brands fa-searchengin fa-xl"></i></span></button>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="text-black m-6">
+    <div>
+        <p class="text-3xl font-bold ">Rooms Matching Your Requirements</p>
+    </div>
+    <div class="grid grid-cols-2  gap-y-4 p-2">
+
+        <div class="flex flex-row h-[40vh] mx-2 rounded-xl shadow-lg ">
+            <div class="  rounded-l-xl h-full w-full hover:scale-125 transition duration-300 ease-in-out relative">
+
+                <img src="assets/images/r11.jpg" class="object-cover h-[40vh] w-full rounded-l-xl" alt="room Image" />
+                <span class="absolute z-10 top-2 left-2"> <i class="fa-solid fa-heart fa-2xl text-gray-600 "></i>
+                </span>
+            </div>
+            <div class="  rounded-r-xl w-full pb-2 flex flex-col border bg-blue-200" routerLink="/details">
+                <div class="text-lg border-b border-black flex-0">
+                    <div class="pl-2">Near Eyeplex, Baneshwor. Fully furnished 1Bhk room.</div>
+                </div>
+                <div class="flex flex-col py-2 border-b border-black flex-0">
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
+                        <span class="pl-4">Baneshwor,Near Iplex</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-chair fa-lg"></i>
+                        <span class="pl-4">Furnished</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-house "></i>
+                        <span class="pl-4">1BHK</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-indian-rupee-sign fa-lg"></i>
+                        <span class="pl-4">15000</span>
+                    </div>
+                </div>
+                <div class="flex-1 gap-x-2 flex flex-row justify-start p-2 !pb-0">
+                    <div
+                        class=" h-full w-20 rounded-xl border border-gray-800 hover:scale-150 transition duration-300 ease-in-out">
+                        <img src="assets/images/r12.jpg" class="object-cover h-full w-full rounded-xl" />
+                    </div>
+                    <div
+                        class=" h-full w-20 rounded-xl border border-gray-800 hover:scale-150 transition duration-300 ease-in-out">
+                        <img src="assets/images/r13.jpg" class="object-cover h-full w-full rounded-xl" />
+                    </div>
+                    <div class="flex justify-end items-end w-40 pr-2">
+                        See All <span class="pl-2"><i class="fa-solid fa-arrow-right fa-lg"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row h-[40vh] mx-2 rounded-xl shadow-lg ">
+            <div class="  rounded-l-xl h-full w-full hover:scale-125 transition duration-300 ease-in-out relative ">
+                <img src="assets/images/r21.jpg" class="object-cover h-[40vh] w-full rounded-l-xl" alt="room Image" />
+                <span class="absolute z-10 top-2 left-2"> <i class="fa-solid fa-heart fa-2xl text-gray-600 "></i>
+                </span>
+
+            </div>
+            <div class="  rounded-r-xl w-full pb-2 flex flex-col border bg-blue-200" routerLink="/details">
+                <div class="text-lg border-b border-black flex-0">
+                    <div class="pl-2">Near Eyeplex, Baneshwor. Fully furnished 1Bhk room.</div>
+                </div>
+                <div class="flex flex-col py-2 border-b border-black flex-0">
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
+                        <span class="pl-4">Baneshwor,Near Iplex</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-chair fa-lg"></i>
+                        <span class="pl-4">Furnished</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-house "></i>
+                        <span class="pl-4">1BHK</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-indian-rupee-sign fa-lg"></i>
+                        <span class="pl-4">15000</span>
+                    </div>
+                </div>
+                <div class="flex-1 gap-x-2 flex flex-row justify-start p-2 !pb-0">
+                    <div
+                        class=" h-full w-20 rounded-xl border border-gray-800 hover:scale-150 transition duration-300 ease-in-out">
+                        <img src="assets/images/r22.jpg" class="object-cover h-full w-full rounded-xl" />
+                    </div>
+                    <div
+                        class=" h-full w-20 rounded-xl border border-gray-800 hover:scale-150 transition duration-300 ease-in-out">
+                        <img src="assets/images/r23.jpg" class="object-cover h-full w-full rounded-xl" />
+                    </div>
+                    <div class="flex justify-end items-end w-40 pr-2">
+                        See All <span class="pl-2"><i class="fa-solid fa-arrow-right fa-lg"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row h-[40vh] mx-2 rounded-xl shadow-lg ">
+            <div class="  rounded-l-xl h-full w-full hover:scale-125 transition duration-300 ease-in-out relative">
+                <img src="assets/images/r31.jpg" class="object-cover h-[40vh] w-full rounded-l-xl" alt="room Image" />
+                <span class="absolute z-10 top-2 left-2"> <i class="fa-solid fa-heart fa-2xl text-gray-600 "></i>
+                </span>
+
+            </div>
+            <div class="  rounded-r-xl w-full pb-2 flex flex-col border bg-blue-200" routerLink="/details">
+                <div class="text-lg border-b border-black flex-0">
+                    <div class="pl-2">Near Eyeplex, Baneshwor. Fully furnished 1Bhk room.</div>
+                </div>
+                <div class="flex flex-col py-2 border-b border-black flex-0">
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
+                        <span class="pl-4">Baneshwor,Near Iplex</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-chair fa-lg"></i>
+                        <span class="pl-4">Furnished</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-house "></i>
+                        <span class="pl-4">1BHK</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-indian-rupee-sign fa-lg"></i>
+                        <span class="pl-4">15000</span>
+                    </div>
+                </div>
+                <div class="flex-1 gap-x-2 flex flex-row justify-start p-2 !pb-0">
+                    <div
+                        class=" h-full w-20 rounded-xl border border-gray-800 hover:scale-150 transition duration-300 ease-in-out">
+                        <img src="assets/images/r32.jpg" class="object-cover h-full w-full rounded-xl" />
+                    </div>
+                    <div
+                        class=" h-full w-20 rounded-xl border border-gray-800 hover:scale-150 transition duration-300 ease-in-out">
+                        <img src="assets/images/r33.webp" class="object-cover h-full w-full rounded-xl" />
+                    </div>
+                    <div class="flex justify-end items-end w-40 pr-2">
+                        See All <span class="pl-2"><i class="fa-solid fa-arrow-right fa-lg"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row h-[40vh] mx-2 rounded-xl shadow-lg ">
+            <div class="  rounded-l-xl h-full w-full hover:scale-125 transition duration-300 ease-in-out relative">
+                <img src="assets/images/r41.jpg" class="object-cover h-[40vh] w-full rounded-l-xl" alt="room Image" />
+                <span class="absolute z-10 top-2 left-2"> <i class="fa-solid fa-heart fa-2xl text-gray-600 "></i>
+                </span>
+
+            </div>
+            <div class="  rounded-r-xl w-full pb-2 flex flex-col border bg-blue-200" routerLink="/details">
+                <div class="text-lg border-b border-black flex-0">
+                    <div class="pl-2">Near Eyeplex, Baneshwor. Fully furnished 1Bhk room.</div>
+                </div>
+                <div class="flex flex-col py-2 border-b border-black flex-0">
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
+                        <span class="pl-4">Baneshwor,Near Iplex</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-chair fa-lg"></i>
+                        <span class="pl-4">Furnished</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-house "></i>
+                        <span class="pl-4">1BHK</span>
+                    </div>
+                    <div class="flex flex-row items-center pb-1 pl-1">
+                        <i class="fa-solid fa-indian-rupee-sign fa-lg"></i>
+                        <span class="pl-4">15000</span>
+                    </div>
+                </div>
+                <div class="flex-1 gap-x-2 flex flex-row justify-start p-2 !pb-0">
+                    <div
+                        class=" h-full w-20 rounded-xl border border-gray-800 hover:scale-150 transition duration-300 ease-in-out">
+                        <img src="assets/images/r42.jpg" class="object-cover h-full w-full rounded-xl" />
+                    </div>
+                    <div
+                        class=" h-full w-20 rounded-xl border border-gray-800 hover:scale-150 transition duration-300 ease-in-out">
+                        <img src="assets/images/r43.jpg" class="object-cover h-full w-full rounded-xl" />
+                    </div>
+                    <div class="flex justify-end items-end w-40 pr-2">
+                        See All <span class="pl-2"><i class="fa-solid fa-arrow-right fa-lg"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

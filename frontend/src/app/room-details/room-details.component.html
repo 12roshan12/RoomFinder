@@ -1,0 +1,170 @@
+<div class="m-6">
+
+    <div class="grid grid-cols-2 gap-x-4 rounded-xl p-4 bg-gray-100 ">
+        <div>
+            <swiper swiper-container class="!w-full !h-[50vh] rounded-lg" [slidesPerView]="1"
+                [autoplay]="{ delay:2500, disableOnInteraction: false }" [loop]="true" [spaceBetween]="50">
+                <ng-template swiperSlide class="!w-full !h-full" *ngFor="let s of slides">
+
+                    <img class="!w-full !h-full rounded-lg" [src]="s">
+
+                </ng-template>
+
+            </swiper>
+        </div>
+        <div class="flex flex-col ">
+            <div>
+                <swiper swiper-container class="!w-full !h-[50vh] rounded-lg" [slidesPerView]="1"
+                    [autoplay]="{ delay:2500, disableOnInteraction: false }" [loop]="true" [spaceBetween]="50">
+                    <ng-template swiperSlide class="!w-full !h-full" *ngFor="let s of slides1">
+
+                        <img class="!w-full !h-full rounded-lg" [src]="s">
+
+                    </ng-template>
+
+                </swiper>
+            </div>
+            <!-- <div>
+                <swiper swiper-container class="!w-full !h-full rounded-lg" [slidesPerView]="1"
+                    [autoplay]="{ delay:2500, disableOnInteraction: false }" [loop]="true" [spaceBetween]="50">
+                    <ng-template swiperSlide class="!w-full !h-full" *ngFor="let s of slides2">
+
+                        <img class="!w-full !h-full rounded-lg" [src]="s">
+
+                    </ng-template>
+
+                </swiper>
+            </div> -->
+
+        </div>
+
+    </div>
+    <div class="grid grid-cols-2 gap-x-4 mt-4">
+        <div class="w-full p-4 border border-blue-400 rounded-lg">
+            <div class="mb-2">
+                <div class=" mb-2">
+                    <div class="text-3xl font-bold tracking-wider">
+                        1BHK Fully Furnished Room
+                    </div>
+                    <div class="text-xl ">
+                        Near EyePlex Mall
+                    </div>
+                </div>
+
+            </div>
+            <div class="mb-2">
+                <div class="text-xl mb-2">
+                    Description
+                </div>
+                <div>
+                    A fully furnished room situated in heart of kathmandu near eye plex mall in baneswor.
+                </div>
+            </div>
+            <div class="mb-2 ">
+                <div class="text-xl mb-2">
+                    Amenities
+                </div>
+                <div class="flex items-center justify-start flex-row gap-x-4">
+                    <div class="border border-gray-100 rounded h-auto flex flex-col justify-center items-center p-2">
+                        <i class="fa-solid fa-wifi fa-xl py-2"></i>
+                        <span class=""> Free Wifi</span>
+                    </div>
+                    <div class="border border-gray-100 rounded h-auto flex flex-col justify-center items-center p-2">
+                        <i class="fa-solid fa-faucet-drip fa-xl py-2"></i>
+                        <span class=""> 24 Hrs Water</span>
+                    </div>
+                    <div class="border border-gray-100 rounded h-auto flex flex-col justify-center items-center p-2">
+                        <i class="fa-solid fa-couch fa-xl py-2"></i>
+                        <span class=""> Furnished</span>
+                    </div>
+                    <div class="border border-gray-100 rounded h-auto flex flex-col justify-center items-center p-2">
+                        <i class="fa-solid fa-sun fa-xl py-2"></i>
+                        <span class=""> Direct Sunlight</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="w-full p-4 border border-blue-400 rounded-lg">
+            <div class="flex flex-row justify-between">
+                <div class="text-2xl font-bold flex items-end">
+                    <span class="border-b pb-2 border-black">User Ratings</span> 
+                </div>
+                <div class="border-gray-800 border-2 rounded-lg p-2">
+                    <p>Total Ratings (150)</p>
+                    <div>
+                        <ul class="flex justify-center">
+                            <li>
+                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="w-3.5 text-red-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                              </svg>
+                            </li>
+                            <li>
+                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="w-3.5 text-red-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                              </svg>
+                            </li>
+                            <li>
+                              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="w-3.5 text-red-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                              </svg>
+                            </li>
+                            <li>
+                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="w-3.5 text-red-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                              </svg>
+                            </li>
+                            <li>
+                              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="w-3.5 text-red-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                              </svg>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border-2 border-gray-200 rounded mt-2 flex flex-row gap-x-2 " >
+
+                <div class="w-1/4  border-2 border-black">
+                    <img src="assets/images/person.jpg" alt="person" class="w-full" />
+                </div>
+
+                <div class="w-3/4 flex flex-col mt-2" >
+                    <ul class="flex justify-start">
+                        <li>
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="w-3.5 text-red-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                          </svg>
+                        </li>
+                        <li>
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="w-3.5 text-red-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                          </svg>
+                        </li>
+                        <li>
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="w-3.5 text-red-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                          </svg>
+                        </li>
+                        <li>
+                          <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="w-3.5 text-red-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                          </svg>
+                        </li>
+                        <li>
+                          <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="heart" class="w-3.5 text-red-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                          </svg>
+                        </li>
+                      </ul>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur voluptates excepturi sunt. Suscipit porro vitae necessitatibus, nesciunt itaque officia ipsum ut nam in, reprehenderit sapiente praesentium nisi, deserunt voluptatum debitis!
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+
+
+</div>
