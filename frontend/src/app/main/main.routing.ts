@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { MainComponent } from './main.component';
 import { RoomDetailsComponent } from './room-details/room-details.component';
 import { RoomListComponent } from './room-list/room-list.component';
+import { MainComponent } from './main.component';
+
 
 const routes: Routes = [
     {

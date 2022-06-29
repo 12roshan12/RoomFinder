@@ -7,9 +7,10 @@ import { MainComponent } from "./main.component";
 import { MainRoutingModule } from "./main.routing";
 import { MaterialModule } from "../material/material.module";
 import { FooterComponent } from "./footer/footer.component";
+import { HomeComponent } from "./home/home.component";
 import { RoomDetailsComponent } from "./room-details/room-details.component";
 import { RoomListComponent } from "./room-list/room-list.component";
-import { HomeComponent } from "./home/home.component";
+
 
 
 @NgModule({

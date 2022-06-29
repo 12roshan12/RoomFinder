@@ -10,16 +10,18 @@ app.use(express.json())
 app.use(express.urlencoded())
 
 app.use(cors())
-app.use(body.json());
-app.use(body.urlencoded({
-    extended: true
-}));
 
 app.use("/userForm",UserFormRouter)
 
 
 
+app.use(body.json());
+app.use(body.urlencoded({
+    extended: true
+}));
+
+
 app.listen(5002, function () {
-    console.log('CORS-enabled web server listening on port 80')
+    console.log('CORS-enabled web server is online')
   })
   
