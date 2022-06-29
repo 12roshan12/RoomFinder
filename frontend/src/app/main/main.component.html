@@ -1,0 +1,73 @@
+<mat-drawer-container [hasBackdrop]="true">
+    <mat-drawer #drawer mode="over" >
+  
+      <div class="border-b border-gray-400 bg-blue-200 h-[60px]">
+        <div class="flex flex-row my-auto items-center justify-between pt-[20px] ">
+          <span class="flex items-center text-xl font-mono px-2">Room Finder</span>
+          <span class="flex items-center"> <mat-icon class="  text-black" (click)="drawer.toggle()">close</mat-icon> </span>
+        </div>
+      </div>
+  
+      <div class="p-3 bg-blue-200">
+        <div>
+          <span>Welcome User.</span>
+        </div>
+      </div>
+  
+    </mat-drawer>
+    <mat-drawer-content>
+  
+      <div class="w-full flex flex-row items-center justify-between lg:p-4 xl:p-4 px-0 py-4  bg-gray-50  text-black lg:h-[60px] xl:h-[60px] h-auto">
+        <div class="flex-0 flex items-center flex-row pl-4">
+          <div>
+            <mat-icon (click)="drawer.toggle()">reorder</mat-icon>
+          </div>
+          <div class="flex flex-row ">
+            <p class="text-xl font-mono flex items-center pl-4 pt-2">Room&nbsp;Finder </p>
+          </div>
+        </div>
+        <div class="flex-1 lg:flex xl:flex hidden justify-end px-4">
+         
+        </div>
+        <div class="flex-0 lg:flex xl:flex flex-row px-4 hidden ">
+          <div class="flex items-center justify-center px-2 hover:border-b focus:border-b border-black" routerLink="/">
+            <mat-icon class=" ">home</mat-icon>
+            <div class="flex justify-center items-bottom pl-1 text-lg ">
+              Home
+            </div>
+          </div>
+          <div class="flex items-center justify-center px-2 hover:border-b focus:border-b border-black">
+            <mat-icon class=" ">phone_in_talk</mat-icon>
+            <div class="flex justify-center items-bottom pl-1 text-lg ">
+              Contact
+            </div>
+          </div>
+          <div class="flex items-center justify-center px-2 hover:border-b focus:border-b border-black">
+            <mat-icon class="">card_giftcard</mat-icon>
+            <div class="flex justify-center items-bottom pl-1 text-lg ">
+              Offers
+            </div>
+          </div>
+          <div class="flex items-center justify-center px-2 hover:border-b focus:border-b border-black">
+            <mat-icon class=" ">contact_support</mat-icon>
+            <div class="flex justify-center items-bottom pl-1 text-lg ">
+              FAQ
+            </div>
+          </div>
+        </div>
+        <div class="flex-0 lg:px-4 xl:px-4  flex flex-row justify-end gap-x-2 pb-2">
+          <div class="flex items-center justify-center text-lg">
+            LOGIN/SIGNUP
+          </div>
+          <div class="flex items-center justify-center border rounded-full p-1 border-gray-400">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAEO0lEQVRIie2UfUyVVRzHv+c553m5j5AI0VaCAgKXgksqmpnLF8pKA2ZtNmstLVs5xYy5tsxSh7385Vwr1NkbU6tN/2GyotnUFiiRWEPQULmFBBJv6wrce7nPc855+sfreLtgo9bW/P51zm/n8/ue7287B7ilW/qXREYrrt+6K5Eyo1hKmc+5iGGM+qCQcoeHtu15Z/Pv/wQzwnjdm7tzFULLPBkzXKlJCcw0DQQCA2hqbuX1jd6gEOJDB1gAB9nXO5wjwClKaWEkRjpixb63i05ENF6/dVciFPX8siXzo+PjYkak6urx4ZuT1Vxw64UBnZYDgG7JAkbVTx5bMp9FYipOVvdB2pmDkyuDD1FmFHsyZrhGawAA8XExyMpIdahm5JbuKPKV7ijyaaqxJCtjBsZiPBmpBmF68eD6EGMpZX5qUgIbtcN1pSZNVSGc/IkwAMAA4KUtux0AsDmHaRpj9cAklwHhiMnhvZBi8s0wtuBxYZ/97xURFl4AwIa3PugOBAbioqPMiE38wQFQhfnCe6rQazfDqEztLtlZGB+uDRk1FFLe1NzKx7p9U3ObTQjKJ8QMN3Z4aFt9ozfY1ePDaOrq8aGh0RuUIrR9IgwA0MGbM5XHenMWPlLjbW57UkooUaaLMkbh9wdx4VKzfbq23m8La8W+dzfXTYQBxvi5CNOLIZ0bvxAh5KgUoe1j/Vx/l/lPNGri0XR45UrK77ReJwTrueBxlLLjlCiqxe2FlNIuIfj7eoe5+6kjR8TN9Bvx8A++svxFyfERIc7+50oqXg7XZaL9cbTLfPqBeTl6VPQknGv4ZSmBQj2ZbqXf70+oOn1mWx8CyQA2hJkvNxUctGz+LIizdnVJxaeDfYY+JwBMYVuSpyeAKuyOG5cpzFsMB88szX1Qj42NgaaqmDMrW82ZlaVomorYKTF49OFF0UQhaz4rzFsc5lRNm56SnOgoRHl13MSci2mZd6ejpbU998C6x7O4KjtUyg7Pv2+2putaxNHpuoYF9+cYp6prP/9iU8FsHhLxlmXPybrHTX670uoefn5EYkJIyJzkwpzZHkNzqdUaWFt6ekrstMS7IpqGNX3aVMXtTomRjmwxTL1m3txsw9B1EGBg3MSUsR9aWq7mutNSNHdaSsSI3T1/AgBuj5sypJ4z02PmzPQAgAYAFy97bYBUjZvYCvI3fqprCPb1+yMmu9regW9PVAWPHa8MtP/RGfFcb18/zv7cYHEhdo4IOLxQVnup7Ym5aV1N3isPMcaYabqIQin6+/3o6OxGTW2d/8LFy72WzVcRIY42t7Qt7+jsslVV1QghYCpDMBiE99cW+X3Vj0Ep5Gur93xdNtwn4js+uDHvXkZpsXScRYKLKEqVa5TS8yHLOiD9gUPPl343AACHNi67jQuyVte0VVKIdCFlNGW0XwEqQ5bYsWbvV2cjjuSW/tf6C+SZFD8agnMoAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      </div>
+      <div class="mb-6">
+        <router-outlet></router-outlet>
+      </div>
+      <app-footer></app-footer>
+    </mat-drawer-content>
+  </mat-drawer-container>
