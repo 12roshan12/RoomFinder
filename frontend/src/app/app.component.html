@@ -1,14 +1,17 @@
 <mat-drawer-container [hasBackdrop]="true">
-  <mat-drawer #drawer mode="over">
+  <mat-drawer #drawer mode="over" >
 
-    <div class="flex justify-end items-center m-3 border-b border-gray-400">
-      <div>
-        <mat-icon class="  text-black" (click)="drawer.toggle()">close</mat-icon>
+    <div class="border-b border-gray-400 bg-blue-200 h-[60px]">
+      <div class="flex flex-row my-auto items-center justify-between pt-[20px] ">
+        <span class="flex items-center text-xl font-mono px-2">Room Finder</span>
+        <span class="flex items-center"> <mat-icon class="  text-black" (click)="drawer.toggle()">close</mat-icon> </span>
       </div>
     </div>
 
-    <div class="m-3">
-      aaaaaaaaaaaaaaaa
+    <div class="p-3 bg-blue-200">
+      <div>
+        <span>Welcome User.</span>
+      </div>
     </div>
 
   </mat-drawer>
