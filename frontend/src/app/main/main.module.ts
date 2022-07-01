@@ -5,22 +5,29 @@ import { SwiperModule } from "swiper/angular";
 import { RoomsectionComponent } from "./roomsection/roomsection.component";
 import { MainComponent } from "./main.component";
 import { MainRoutingModule } from "./main.routing";
-import { MaterialModule } from "../material/material.module";
 import { FooterComponent } from "./footer/footer.component";
 import { HomeComponent } from "./home/home.component";
 import { RoomDetailsComponent } from "./room-details/room-details.component";
 import { RoomListComponent } from "./room-list/room-list.component";
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from "@angular/material/select";
+import {MatSliderModule} from '@angular/material/slider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
     imports: [
         CommonModule,
         MainRoutingModule,
-        MaterialModule,
         ReactiveFormsModule,
+        MatFormFieldModule,
+        MatSelectModule,
         FormsModule,
-        SwiperModule
+        SwiperModule,
+        MatIconModule,
+        MatSidenavModule,
+        MatSliderModule
     ],
     declarations: [
         MainComponent,

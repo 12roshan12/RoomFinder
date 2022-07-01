@@ -1,31 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-room-list',
   templateUrl: './room-list.component.html',
-  styleUrls: ['./room-list.component.scss']
+  styleUrls: ['./room-list.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class RoomListComponent implements OnInit {
-  filterForm: any
+  filterForm: FormGroup = new FormGroup({})
 
 
-  constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder) {
     this.buildForm()
+
   }
 
-buildForm(){
-  this.filterForm = this.fb.group({
-    accomodationType:[],
-    category:[],
-    size:[],
-    city:[],
-    area:[],
-    price:[15000],
-  })
-}
+  ngOnInit(): void {
+  }
+
+  buildForm() {
+    this.filterForm = this.fb.group({
+      accomodationType: [],
+      category: [],
+      size: [],
+      city: [],
+      area: [],
+      price: [15000],
+    })
+  }
 
 
   formatLabel(value: number) {
@@ -35,10 +38,13 @@ buildForm(){
 
     return value;
   }
-  test(){
-    console.log(this.filterForm.controls.price.value);
-    
+  test() {
+    console.log(this.filterForm.get('price')?.value);
+
   }
- 
+  search() {
+    console.log(this.filterForm.value);
+
+  }
 
 }
